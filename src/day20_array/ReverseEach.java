@@ -11,10 +11,17 @@ public class ReverseEach {
         String result = "";
 
         for (int i = 0; i < words.length; i++) {
-            char ch = words[2].charAt(3);
-            System.out.println(ch);
+            if (i == 2) {
+                String word = words[i];
+                for (int j = word.length() - 1; j >= 0; j--) {
+                    result += word.charAt(j);
+                }
+                result += " ";
+            } else {
+                result += words[i] + " ";
+            }
         }
-
+        System.out.println(result);
     }
 }
 /*
